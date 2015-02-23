@@ -1,2 +1,48 @@
 /* ---Header--- */
 
+.header{
+  overflow: hidden;
+  background: $bgHeader;
+}
+
+.logo{
+  display: block;
+  float: left;
+  padding-top: 0.667em;
+  padding-bottom: 0.667em;
+  max-width: 10.667em;
+}
+
+.mobileMenuButton{
+  background: url("../images/icons/mobileMenu.png");
+  width: 35px;
+  height: 28px;
+  float: right;
+}
+
+.mobileMenuButtonClose{
+  background: url("../images/icons/mobileMenuClose.png");
+  width: 26px;
+  height: 28px;
+  float: right;
+}
+
+.headerNav{
+  margin-bottom: .5em;
+}
+
+.headerNav ul li a{
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.25em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $colorFont_1;
+  background: $bgMobileMenu;
+  border-bottom: 1px solid $borderColor;
+  &:hover{
+    font-weight: 700;
+    color: $colorFont_3;
+  }
+}

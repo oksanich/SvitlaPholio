@@ -1,0 +1,34 @@
+/* ---Global--- */
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: $colorFont_1;
+}
+
+.pageTitle{
+  font-size: 1.125em;
+  color: $colorFont_1;
+  font-weight: 400;
+  position: relative;
+  padding: 1em 0;
+
+}
+
+.pageTitle:before,
+.pageTitle:after{
+  content: '';
+  background: url("../images/icons/borderDot.png") repeat-x;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+}
+
+.pageTitle:before{
+  top: 0;
+}
+
+.pageTitle:after{
+  bottom: 0;
+  left: 0;
+}
