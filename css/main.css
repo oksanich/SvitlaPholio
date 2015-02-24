@@ -5035,6 +5035,7 @@ body {
   font-weight: 400;
   position: relative;
   padding: 1em 0;
+  margin-bottom: 2em;
 }
 
 .pageTitle:before,
@@ -5089,8 +5090,8 @@ body {
 
 .headerNav ul li a {
   display: block;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 1.250em;
+  padding-bottom: 1.250em;
   font-size: 1.25em;
   font-weight: 400;
   text-transform: uppercase;
@@ -5101,4 +5102,9 @@ body {
 .headerNav ul li a:hover {
   font-weight: 700;
   color: #ff7e00;
+}
+
+/* ---Portfolio Item--- */
+.portfolioItem {
+  background: #fff;
 }
