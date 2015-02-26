@@ -13,18 +13,20 @@
   max-width: 10.667em;
 }
 
-.mobileMenuButton{
-  background: url("../images/icons/mobileMenu.png");
+%mobileMenuButton{
   width: 35px;
   height: 28px;
   float: right;
 }
 
+.mobileMenuButtonOpen{
+  @extend %mobileMenuButton;
+  background: url("../images/icons/mobileMenu.png") no-repeat;
+}
+
 .mobileMenuButtonClose{
-  background: url("../images/icons/mobileMenuClose.png");
-  width: 26px;
-  height: 28px;
-  float: right;
+  @extend %mobileMenuButton;
+  background: url("../images/icons/mobileMenuClose.png") no-repeat;
 }
 
 .headerNav{

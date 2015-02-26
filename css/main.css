@@ -5029,6 +5029,13 @@ body {
   color: #444444;
 }
 
+a {
+  color: #ff7e00;
+}
+a:hover {
+  color: #ff7e00;
+}
+
 .pageTitle {
   font-size: 1.125em;
   color: #444444;
@@ -5070,18 +5077,18 @@ body {
   max-width: 10.667em;
 }
 
-.mobileMenuButton {
-  background: url("../images/icons/mobileMenu.png");
+.mobileMenuButtonOpen, .mobileMenuButtonClose {
   width: 35px;
   height: 28px;
   float: right;
 }
 
+.mobileMenuButtonOpen {
+  background: url("../images/icons/mobileMenu.png") no-repeat;
+}
+
 .mobileMenuButtonClose {
-  background: url("../images/icons/mobileMenuClose.png");
-  width: 26px;
-  height: 28px;
-  float: right;
+  background: url("../images/icons/mobileMenuClose.png") no-repeat;
 }
 
 .headerNav {
@@ -5107,4 +5114,46 @@ body {
 /* ---Portfolio Item--- */
 .portfolioItem {
   background: #fff;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  border-bottom: 2px solid #d5d5d5;
+  margin-bottom: 2em;
+}
+
+.portfolioItemImg {
+  margin-bottom: 1em;
+}
+.portfolioItemImg img {
+  width: 100%;
+  height: 100%;
+  max-height: 413px;
+}
+
+.portfolioItemTitle {
+  font-size: 0.875em;
+  font-weight: 700;
+  color: #444444;
+  margin-bottom: 0.263em;
+}
+
+.portfolioItemInfo {
+  padding: 0.750em;
+}
+.portfolioItemInfo a {
+  font-size: 0.875em;
+  font-weight: 400;
+  margin-bottom: 0.625em;
+  display: inline-block;
+}
+.portfolioItemInfo a:hover {
+  text-decoration: underline;
+}
+
+.portfolioItemTags {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: #9d9b9b;
+  padding-top: 0.625em;
+  border-top: 1px solid #d5d5d5;
 }

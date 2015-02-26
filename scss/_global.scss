@@ -6,6 +6,13 @@ body{
   color: $colorFont_1;
 }
 
+a{
+  color: $colorFont_3;
+  &:hover{
+    color: $colorFont_3;
+  }
+}
+
 .pageTitle{
   font-size: 1.125em;
   color: $colorFont_1;
