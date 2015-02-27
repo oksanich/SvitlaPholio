@@ -1,8 +1,12 @@
 /* ---Header--- */
 
+.mainHeader{
+  background: $bgHeader;
+  margin-bottom: .5em;
+}
+
 .header{
   overflow: hidden;
-  background: $bgHeader;
 }
 
 .logo{
@@ -10,33 +14,32 @@
   float: left;
   padding-top: 0.667em;
   padding-bottom: 0.667em;
-  max-width: 10.667em;
 }
 
-%mobileMenuButton{
+.mobileMenuButton{
   width: 35px;
   height: 28px;
   float: right;
 }
 
 .mobileMenuButtonOpen{
-  @extend %mobileMenuButton;
+  @extend .mobileMenuButton;
   background: url("../images/icons/mobileMenu.png") no-repeat;
 }
 
 .mobileMenuButtonClose{
-  @extend %mobileMenuButton;
+  @extend .mobileMenuButton;
   background: url("../images/icons/mobileMenuClose.png") no-repeat;
 }
 
 .headerNav{
-  margin-bottom: .5em;
+
 }
 
 .headerNav ul li a{
   display: block;
-  padding-top: 1.250em;
-  padding-bottom: 1.250em;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
   font-size: 1.25em;
   font-weight: 400;
   text-transform: uppercase;
@@ -46,5 +49,28 @@
   &:hover{
     font-weight: 700;
     color: $colorFont_3;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .mobileMenuButton{
+    display: none;
+  }
+
+  .headerNav ul li a{
+    display: block;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    font-size: 1.25em;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $colorFont_1;
+    background: $bgMobileMenu;
+    border-bottom: 1px solid $borderColor;
+    &:hover{
+      font-weight: 700;
+      color: $colorFont_3;
+    }
   }
 }

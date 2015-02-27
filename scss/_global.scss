@@ -4,6 +4,7 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: $colorFont_1;
+  background: url("../images/bgMobile.jpg") $bgBody;
 }
 
 a{
@@ -38,4 +39,25 @@ a{
 .pageTitle:after{
   bottom: 0;
   left: 0;
+}
+
+@media (min-width: 768px) {
+
+  body {
+    background: url("../images/bgDesktop.jpg") $bgBody;
+  }
+
+}
+
+
+.visibleMOnly {
+  @media (min-width: 768px) and (max-width: 1024px){
+    display: block!important;
+  }
+}
+
+.visibleLOnly {
+  @media (min-width: 1025px) {
+    display: block!important;
+  }
 }
