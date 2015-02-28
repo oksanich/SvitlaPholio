@@ -2,11 +2,13 @@
 
 .mainHeader{
   background: $bgHeader;
-  margin-bottom: .5em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid $borderColor;
 }
 
 .header{
   overflow: hidden;
+  position: relative;
 }
 
 .logo{
@@ -14,6 +16,7 @@
   float: left;
   padding-top: 0.667em;
   padding-bottom: 0.667em;
+  margin-top: .6em;
 }
 
 .mobileMenuButton{
@@ -36,7 +39,15 @@
 
 }
 
-.headerNav ul li a{
+.headerNavItem{
+  border-bottom: 1px solid $borderColor;
+
+  &:first-child{
+    border-top: 1px solid $borderColor;
+  }
+}
+
+.headerNavLink{
   display: block;
   padding-top: 1.25em;
   padding-bottom: 1.25em;
@@ -45,32 +56,85 @@
   text-transform: uppercase;
   color: $colorFont_1;
   background: $bgMobileMenu;
-  border-bottom: 1px solid $borderColor;
+
   &:hover{
     font-weight: 700;
     color: $colorFont_3;
   }
 }
 
+.socialHeader{
+  display: none;
+  position: absolute;
+}
+
 @media (min-width: 768px) {
+
+  .mobileMenu{
+    position: absolute;
+  }
 
   .mobileMenuButton{
     display: none;
   }
 
-  .headerNav ul li a{
-    display: block;
-    padding-top: 1.25em;
-    padding-bottom: 1.25em;
-    font-size: 1.25em;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: $colorFont_1;
-    background: $bgMobileMenu;
-    border-bottom: 1px solid $borderColor;
-    &:hover{
-      font-weight: 700;
-      color: $colorFont_3;
+  .wrapHeaderNav{
+    float: right;
+  }
+  
+  .headerNav {
+    float: left;
+  }
+
+  .headerNavItem{
+    float: left;
+    border-bottom: 3px solid $bgHeaderOpacity;
+    margin-left: 0.375em;
+
+    &:first-child{
+      border-top: none;
+      margin-left: 0;
     }
+    &:hover{
+      border-bottom: 3px solid $colorFont_3;
+    }
+  }
+
+  .headerNavLink{
+    padding: 1.875em 0.625em 1.688em;
+    font-size: 0.875em;
+    color: $colorFont_1;
+    background: none;
+
+    &:after {
+      display:block;
+      content:attr(title);
+      font-weight:bold;
+      height:1px;
+      color:transparent;
+      overflow:hidden;
+      visibility:hidden;
+    }
+  }
+
+  .socialHeader{
+    display: block;
+    position: static;
+    float: left;
+  }
+
+  .socialHeaderList{
+    overflow: hidden;
+  }
+
+  .socialHeaderItem{
+    float: left;
+    margin-left: 0.575em;
+    margin-top: 1em;
+  }
+
+  .socialHeaderLink{
+    color: $colorFont_2;
+    font-size: 2em;
   }
 }
