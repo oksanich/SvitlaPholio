@@ -23,11 +23,8 @@
 }
 
 .portfolioItemTitleLink{
-  display: block;
+  display: inline-block;
   color: $colorFont_1;
-  &:hover{
-    text-decoration: underline;
-  }
 }
 
 .portfolioItemTitle{
@@ -35,6 +32,9 @@
   font-weight: 700;
   color:  $colorFont_1;
   margin-bottom: 0.313em;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 
 .portfolioItemInfo{
@@ -45,7 +45,7 @@
   font-size: 0.875em;
   font-weight: 400;
   margin-bottom: 0.625em;
-  display: inline-block;
+  display: block;
   &:hover{
     text-decoration: underline;
   }

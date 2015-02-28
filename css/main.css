@@ -1452,7 +1452,7 @@ table {
 
 @media screen and (max-width: 767px) {
   .rowSep30 {
-    margin-right: -0.6em;
+    margin-right: -0.6;
     margin-left: -0.6em;
   }
 }
@@ -5363,11 +5363,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .portfolioItemTitleLink {
-  display: block;
+  display: inline-block;
   color: #444444;
-}
-.portfolioItemTitleLink:hover {
-  text-decoration: underline;
 }
 
 .portfolioItemTitle {
@@ -5375,6 +5372,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: 700;
   color: #444444;
   margin-bottom: 0.313em;
+}
+.portfolioItemTitle:hover {
+  text-decoration: underline;
 }
 
 .portfolioItemInfo {
@@ -5385,7 +5385,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 0.875em;
   font-weight: 400;
   margin-bottom: 0.625em;
-  display: inline-block;
+  display: block;
 }
 .portfolioItemLink:hover {
   text-decoration: underline;
@@ -5400,6 +5400,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* ---Contact Page--- */
+.mainMapAndContact {
+  overflow: hidden;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.contactText {
+  margin-bottom: 2.813em;
+}
+
 .contactTextTitle {
   color: #444444;
   font-size: 2.188em;
@@ -5407,23 +5418,66 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: .25em;
 }
 
+.contactTextText {
+  line-height: 1.5em;
+}
+
+.map {
+  margin-bottom: 1em;
+}
+
+.contactTitle {
+  color: #444444;
+  font-size: 1.875em;
+  font-weight: 400;
+  margin-bottom: .5em;
+}
+
+.contactMail {
+  font-size: 1.375em;
+  margin-bottom: 1em;
+}
+
+.contactPhone {
+  font-size: 1.375em;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.contactPhoneLink {
+  color: #444444;
+}
+.contactPhoneLink:hover {
+  color: #444444;
+}
+
+.contactAddress p {
+  margin-bottom: 1em;
+}
+.contactAddress p:first-child {
+  font-weight: 700;
+}
+
 .mainForm {
   margin-bottom: 1.875em;
+  overflow: hidden;
 }
 
 .btn {
   display: inline-block;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   border: 0;
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  color: #fff;
 }
 
 .bgButtonForm {
   background: #ff7e00;
+  font-size: 1.563em;
 }
 .bgButtonForm:hover {
   background: #ff8b1a;
@@ -5478,15 +5532,62 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-shadow: none;
 }
 
+.formEl {
+  margin-bottom: 1.25em;
+}
+
 input.formEl {
   padding-top: 1.625em;
   padding-bottom: 1.625em;
 }
 
 textarea.formEl {
+  padding-top: 1em;
   resize: vertical;
 }
 
+@media (min-width: 768px) {
+  .map {
+    margin-right: 2em;
+  }
+
+  .contactTitle {
+    font-size: 1.125em;
+  }
+
+  .contactMail {
+    font-size: 0.875em;
+  }
+
+  .contactPhone {
+    font-size: 0.875em;
+  }
+
+  .contactPhoneLink {
+    color: #444444;
+  }
+  .contactPhoneLink:hover {
+    color: #444444;
+  }
+
+  .contactAddress {
+    font-size: 0.875em;
+  }
+  .contactAddress p {
+    margin-bottom: .5em;
+  }
+  .contactAddress p:first-child {
+    font-weight: 700;
+  }
+
+  .bgButtonForm {
+    font-size: 0.875em;
+  }
+
+  .rightM {
+    float: right;
+  }
+}
 /* ---Global--- */
 body {
   font-family: 'Open Sans', sans-serif;
