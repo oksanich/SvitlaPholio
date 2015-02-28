@@ -7,21 +7,18 @@
 }
 
 .header{
-  overflow: hidden;
   position: relative;
+
 }
 
 .logo{
   display: block;
   float: left;
-  padding-top: 0.667em;
-  padding-bottom: 0.667em;
-  margin-top: .6em;
+  margin: 1.25em 0 1.25em 1.875em;
 }
 
-.mobileMenuButton{
-  width: 35px;
-  height: 28px;
+.mobileMenu{
+  margin-right: 30px;
   float: right;
 }
 
@@ -35,8 +32,11 @@
   background: url("../images/icons/mobileMenuClose.png") no-repeat;
 }
 
-.headerNav{
-
+.mobileMenuButton{
+  width: 35px;
+  height: 28px;
+  float: right;
+  margin: 1.25em 0;
 }
 
 .headerNavItem{
@@ -68,7 +68,30 @@
   position: absolute;
 }
 
+@media screen and (max-width: 767px) {
+
+  .wrapHeaderNav {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: -300px;
+  }
+}
+
 @media (min-width: 768px) {
+
+  .header{
+    max-width: 1060px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    *zoom: 1
+  }
+
+  .logo {
+    margin: 1.25em 0 1.063em;
+  }
 
   .mobileMenu{
     position: absolute;

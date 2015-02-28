@@ -5209,21 +5209,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .header {
-  overflow: hidden;
   position: relative;
 }
 
 .logo {
   display: block;
   float: left;
-  padding-top: 0.667em;
-  padding-bottom: 0.667em;
-  margin-top: .6em;
+  margin: 1.25em 0 1.25em 1.875em;
 }
 
-.mobileMenuButton, .mobileMenuButtonOpen, .mobileMenuButtonClose {
-  width: 35px;
-  height: 28px;
+.mobileMenu {
+  margin-right: 30px;
   float: right;
 }
 
@@ -5233,6 +5229,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .mobileMenuButtonClose {
   background: url("../images/icons/mobileMenuClose.png") no-repeat;
+}
+
+.mobileMenuButton, .mobileMenuButtonOpen, .mobileMenuButtonClose {
+  width: 35px;
+  height: 28px;
+  float: right;
+  margin: 1.25em 0;
 }
 
 .headerNavItem {
@@ -5262,7 +5265,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: absolute;
 }
 
+@media screen and (max-width: 767px) {
+  .wrapHeaderNav {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: -300px;
+  }
+}
 @media (min-width: 768px) {
+  .header {
+    max-width: 1060px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    *zoom: 1;
+  }
+
+  .logo {
+    margin: 1.25em 0 1.063em;
+  }
+
   .mobileMenu {
     position: absolute;
   }
@@ -5338,17 +5362,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-bottom: 2px solid #d5d5d5;
   margin-bottom: 2em;
 }
-.portfolioItem:hover {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  background: #f2f2f2;
-  border: 1px solid #ffcb99;
-}
 .portfolioItem:hover img {
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
   opacity: 1;
 }
 
@@ -5362,6 +5376,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   opacity: .7;
 }
 
+.portfolioItemTitleLink {
+  display: block;
+  color: #444444;
+}
+.portfolioItemTitleLink:hover {
+  text-decoration: underline;
+}
+
 .portfolioItemTitle {
   font-size: 0.875em;
   font-weight: 700;
@@ -5372,13 +5394,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .portfolioItemInfo {
   padding: 0.750em;
 }
-.portfolioItemInfo a {
+
+.portfolioItemLink {
   font-size: 0.875em;
   font-weight: 400;
   margin-bottom: 0.625em;
   display: inline-block;
 }
-.portfolioItemInfo a:hover {
+.portfolioItemLink:hover {
   text-decoration: underline;
 }
 
@@ -5425,6 +5448,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   line-height: 1.333em;
 }
 
+.socialFooter {
+  margin-bottom: 1em;
+}
+
 .socialFooterItem {
   display: inline-block;
   margin-left: 1.7em;
@@ -5434,7 +5461,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .socialFooterLink {
-  font-size: 2em;
+  font-size: 3em;
   color: #fff;
 }
 
@@ -5458,7 +5485,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   .socialFooterLink {
-    font-size: 1.25em;
+    font-size: 2em;
   }
 }
 /* ---Global--- */

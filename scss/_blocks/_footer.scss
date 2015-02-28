@@ -33,6 +33,10 @@
   line-height: 1.333em;
 }
 
+.socialFooter{
+  margin-bottom: 1em;
+}
+
 .socialFooterItem{
   display: inline-block;
   margin-left: 1.7em;
@@ -43,7 +47,7 @@
 }
 
 .socialFooterLink{
-  font-size: 2em;
+  font-size: 3em;
   color: $colorFont_4;
 }
 
@@ -69,6 +73,6 @@
   }
 
   .socialFooterLink{
-    font-size: 1.25em;
+    font-size: 2em;
   }
 }
