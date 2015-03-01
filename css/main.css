@@ -5368,7 +5368,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .portfolioItemTitle {
-  font-size: 0.875em;
+  font-size: 1.563em;
   font-weight: 700;
   color: #444444;
   margin-bottom: 0.313em;
@@ -5382,7 +5382,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .portfolioItemLink {
-  font-size: 0.875em;
+  font-size: 1.25em;
   font-weight: 400;
   margin-bottom: 0.625em;
   display: block;
@@ -5392,13 +5392,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .portfolioItemTags {
-  font-size: 0.75em;
+  font-size: 1.125em;
   font-weight: 400;
   color: #9d9b9b;
   padding-top: 0.625em;
   border-top: 1px solid #d5d5d5;
 }
 
+@media (min-width: 768px) {
+  .portfolioItemTitle,
+  .portfolioItemLink {
+    font-size: 0.875em;
+  }
+
+  .portfolioItemTags {
+    font-size: 0.75em;
+  }
+}
 /* ---Portfolio preview Page--- */
 .mainNextPrew {
   overflow: hidden;
