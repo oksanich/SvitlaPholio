@@ -4,21 +4,21 @@
   overflow: hidden;
   margin-bottom: 2em;
   padding-bottom: 1em;
-  border-bottom: 1px solid $borderColor;
+  border-bottom: 1px dotted darken($borderColor, 10%);
 }
 
-.contactText{
+.text{
   margin-bottom: 2.813em;
 }
 
-.contactTextTitle{
+.textTitle{
   color: $colorFont_1;
   font-size: 2.188em;
   font-weight: 400;
   margin-bottom: .25em;
 }
 
-.contactTextText{
+.textText{
   line-height: 1.5em;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .mainForm{
-  margin-bottom: 1.875em;
+  margin-bottom: 5em;
   overflow: hidden;
 }
 
@@ -148,11 +148,6 @@ textarea.formEl{
   resize: vertical;
 }
 
-//.colSep30{
-//  margin-right: -15px;
-//  margin-left: -15px;
-//}
-
 @media (min-width: 768px) {
 
   .map{
@@ -189,8 +184,14 @@ textarea.formEl{
     }
   }
 
+  .mainForm{
+    margin-bottom: 3.125em;
+  }
+
   .bgButtonForm{
-  font-size: 0.875em;
+    font-size: 0.875em;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
   }
 
   .rightM {
