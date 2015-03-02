@@ -63,6 +63,11 @@
   }
 }
 
+._active{
+  font-weight: 700;
+  color: $colorFont_3;
+}
+
 .socialHeader{
   display: none;
   position: absolute;
@@ -111,23 +116,23 @@
 
   .headerNavItem{
     float: left;
-    border-bottom: 3px solid $bgHeaderOpacity;
     margin-left: 0.375em;
+    border-bottom: none;
 
     &:first-child{
       border-top: none;
       margin-left: 0;
-    }
-    &:hover{
-      border-bottom: 3px solid $colorFont_3;
     }
   }
 
   .headerNavLink{
     padding: 1.875em 0.625em 1.688em;
     font-size: 0.875em;
-    color: $colorFont_1;
     background: none;
+    border-bottom: 3px solid $bgHeaderOpacity;
+    &:hover{
+      border-bottom: 3px solid $colorFont_3;
+    }
 
     &:after {
       display:block;
@@ -138,6 +143,10 @@
       overflow:hidden;
       visibility:hidden;
     }
+  }
+
+  ._active{
+    border-bottom: 3px solid $colorFont_3;
   }
 
   .socialHeader{

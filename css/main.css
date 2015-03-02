@@ -5171,6 +5171,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #ff7e00;
 }
 
+._active {
+  font-weight: 700;
+  color: #ff7e00;
+}
+
 .socialHeader {
   display: none;
   position: absolute;
@@ -5216,22 +5221,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   .headerNavItem {
     float: left;
-    border-bottom: 3px solid rgba(255, 255, 255, 0);
     margin-left: 0.375em;
+    border-bottom: none;
   }
   .headerNavItem:first-child {
     border-top: none;
     margin-left: 0;
   }
-  .headerNavItem:hover {
-    border-bottom: 3px solid #ff7e00;
-  }
 
   .headerNavLink {
     padding: 1.875em 0.625em 1.688em;
     font-size: 0.875em;
-    color: #444444;
     background: none;
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+  }
+  .headerNavLink:hover {
+    border-bottom: 3px solid #ff7e00;
   }
   .headerNavLink:after {
     display: block;
@@ -5241,6 +5246,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: transparent;
     overflow: hidden;
     visibility: hidden;
+  }
+
+  ._active {
+    border-bottom: 3px solid #ff7e00;
   }
 
   .socialHeader {
@@ -5782,7 +5791,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #444444;
-  background: url("../images/bgMobile.jpg") #ebebeb;
+  background: url("../images/background.jpg") #ebebeb;
 }
 
 a {
@@ -5819,11 +5828,6 @@ a:hover {
   left: 0;
 }
 
-@media (min-width: 768px) {
-  body {
-    background: url("../images/bgDesktop.jpg") #ebebeb;
-  }
-}
 @media (min-width: 768px) and (max-width: 1024px) {
   .visibleMOnly {
     display: block !important;
