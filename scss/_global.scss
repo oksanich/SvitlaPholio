@@ -9,7 +9,7 @@ body{
 
 a{
   color: $colorFont_3;
-  &:hover{
+  &:hover, &:focus{
     color: $colorFont_3;
   }
 }

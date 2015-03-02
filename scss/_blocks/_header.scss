@@ -22,21 +22,102 @@
   float: right;
 }
 
-.mobileMenuButtonOpen{
-  @extend .mobileMenuButton;
-  background: url("../images/icons/mobileMenu.png") no-repeat;
-}
-
-.mobileMenuButtonClose{
-  @extend .mobileMenuButton;
-  background: url("../images/icons/mobileMenuClose.png") no-repeat;
-}
-
-.mobileMenuButton{
+%mobileMenuButton{
   width: 35px;
   height: 28px;
   float: right;
   margin: 1.25em 0;
+}
+
+.sandwichOpen{
+  @extend %mobileMenuButton;
+  width: 35px;
+  height: 35px;
+}
+
+.swTopper {
+  position: relative;
+  top: 0;
+  width: 35px;
+  height: 7px;
+  background: #444;
+  border: none;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-transition: -webkit-transform 0.5s, top 0.2s;
+  -moz-transition: -moz-transform 0.5s, top 0.2s;
+  -o-transition: -o-transform 0.5s, top 0.2s;
+  -ms-transition: -ms-transform 0.5s, top 0.2s;
+  transition: transform 0.5s, top 0.2s;
+  /* transition-delay: 0.2s, 0s; */
+}
+.swBottom {
+  position: relative;
+  width: 35px;
+  height: 7px;
+  top: 7px;
+  background: #444;
+  border: none;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-transition: -webkit-transform 0.5s, top 0.2s;
+  -moz-transition: -moz-transform 0.5s, top 0.2s;
+  -o-transition: -o-transform 0.5s, top 0.2s;
+  -ms-transition: -ms-transform 0.5s, top 0.2s;
+  transition: transform 0.5s, top 0.2s;
+  -webkit-transition-delay: 0.2s, 0s;
+  -moz-transition-delay: 0.2s, 0s;
+  -o-transition-delay: 0.2s, 0s;
+  -ms-transition-delay: 0.2s, 0s;
+  transition-delay: 0.2s, 0s;
+}
+.swFooter {
+  position: relative;
+  width: 35px;
+  height: 7px;
+  top: 14px;
+  background: #444;
+  border: none;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  -ms-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.sandwichOpen.sandwichClose .swTopper {
+  top: 14px;
+  -webkit-transform: rotate(140deg);
+  -moz-transform: rotate(140deg);
+  -o-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  transform: rotate(140deg);
+}
+.sandwichOpen.sandwichClose .swBottom {
+  top: 7px;
+  -webkit-transform: rotate(-140deg);
+  -moz-transform: rotate(-140deg);
+  -o-transform: rotate(-140deg);
+  -ms-transform: rotate(-140deg);
+  transform: rotate(-140deg);
+}
+.sandwichOpen.sandwichClose .swFooter {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  top: 0;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .headerNavItem{
@@ -79,7 +160,8 @@
     position: absolute;
     width: 100%;
     z-index: 1;
-    top: -300px;
+    top: 70px;
+    display: none;
   }
 }
 
@@ -102,12 +184,13 @@
     position: absolute;
   }
 
-  .mobileMenuButton{
+  %mobileMenuButton{
     display: none;
   }
 
   .wrapHeaderNav{
     float: right;
+    display: block !important;
   }
   
   .headerNav {

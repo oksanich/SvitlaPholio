@@ -49,6 +49,10 @@
   margin-bottom: 5.625em;
 }
 
+.skill{
+  margin-bottom: 2.5em;
+}
+
 .skillChart{
   overflow: hidden;
   margin-bottom: 2.5em;
@@ -62,6 +66,19 @@
 .skillAbout{
   font-size: 1.876em;
   line-height: 1.25em;
+}
+
+.chart {
+  position: relative;
+  display: inline-block;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-align: center;
+}
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: 768px) {

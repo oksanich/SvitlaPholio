@@ -1565,12 +1565,6 @@ a {
   transition: color 0.1s linear;
 }
 
-a:hover, a:focus {
-  outline: 0;
-  color: #4bb4ff;
-  text-decoration: none;
-}
-
 a:focus {
   outline: 0;
 }
@@ -5134,19 +5128,105 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   float: right;
 }
 
-.mobileMenuButtonOpen {
-  background: url("../images/icons/mobileMenu.png") no-repeat;
-}
-
-.mobileMenuButtonClose {
-  background: url("../images/icons/mobileMenuClose.png") no-repeat;
-}
-
-.mobileMenuButton, .mobileMenuButtonOpen, .mobileMenuButtonClose {
+.sandwichOpen {
   width: 35px;
   height: 28px;
   float: right;
   margin: 1.25em 0;
+}
+
+.sandwichOpen {
+  width: 35px;
+  height: 35px;
+}
+
+.swTopper {
+  position: relative;
+  top: 0;
+  width: 35px;
+  height: 7px;
+  background: #444;
+  border: none;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-transition: -webkit-transform 0.5s, top 0.2s;
+  -moz-transition: -moz-transform 0.5s, top 0.2s;
+  -o-transition: -o-transform 0.5s, top 0.2s;
+  -ms-transition: -ms-transform 0.5s, top 0.2s;
+  transition: transform 0.5s, top 0.2s;
+  /* transition-delay: 0.2s, 0s; */
+}
+
+.swBottom {
+  position: relative;
+  width: 35px;
+  height: 7px;
+  top: 7px;
+  background: #444;
+  border: none;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-transition: -webkit-transform 0.5s, top 0.2s;
+  -moz-transition: -moz-transform 0.5s, top 0.2s;
+  -o-transition: -o-transform 0.5s, top 0.2s;
+  -ms-transition: -ms-transform 0.5s, top 0.2s;
+  transition: transform 0.5s, top 0.2s;
+  -webkit-transition-delay: 0.2s, 0s;
+  -moz-transition-delay: 0.2s, 0s;
+  -o-transition-delay: 0.2s, 0s;
+  -ms-transition-delay: 0.2s, 0s;
+  transition-delay: 0.2s, 0s;
+}
+
+.swFooter {
+  position: relative;
+  width: 35px;
+  height: 7px;
+  top: 14px;
+  background: #444;
+  border: none;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  -ms-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.sandwichOpen.sandwichClose .swTopper {
+  top: 14px;
+  -webkit-transform: rotate(140deg);
+  -moz-transform: rotate(140deg);
+  -o-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  transform: rotate(140deg);
+}
+
+.sandwichOpen.sandwichClose .swBottom {
+  top: 7px;
+  -webkit-transform: rotate(-140deg);
+  -moz-transform: rotate(-140deg);
+  -o-transform: rotate(-140deg);
+  -ms-transform: rotate(-140deg);
+  transform: rotate(-140deg);
+}
+
+.sandwichOpen.sandwichClose .swFooter {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  top: 0;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .headerNavItem {
@@ -5186,7 +5266,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     position: absolute;
     width: 100%;
     z-index: 1;
-    top: -300px;
+    top: 70px;
+    display: none;
   }
 }
 @media (min-width: 768px) {
@@ -5207,12 +5288,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     position: absolute;
   }
 
-  .mobileMenuButton, .mobileMenuButtonOpen, .mobileMenuButtonClose {
+  .sandwichOpen {
     display: none;
   }
 
   .wrapHeaderNav {
     float: right;
+    display: block !important;
   }
 
   .headerNav {
@@ -5737,6 +5819,10 @@ textarea.formEl {
   margin-bottom: 5.625em;
 }
 
+.skill {
+  margin-bottom: 2.5em;
+}
+
 .skillChart {
   overflow: hidden;
   margin-bottom: 2.5em;
@@ -5750,6 +5836,20 @@ textarea.formEl {
 .skillAbout {
   font-size: 1.876em;
   line-height: 1.25em;
+}
+
+.chart {
+  position: relative;
+  display: inline-block;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: 768px) {
@@ -5797,7 +5897,7 @@ body {
 a {
   color: #ff7e00;
 }
-a:hover {
+a:hover, a:focus {
   color: #ff7e00;
 }
 
