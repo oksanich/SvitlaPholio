@@ -5430,6 +5430,62 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-size: 2em;
   }
 }
+/* ---Home Page--- */
+.quote {
+  display: block;
+  margin: 1em 0;
+  font-size: 1.5em;
+  padding: 1em;
+  background: rgba(191, 191, 191, 0.65);
+}
+.quote:before {
+  content: "\201C";
+  margin-right: .5em;
+}
+.quote:after {
+  content: "\201D";
+  margin-left: .5em;
+}
+
+.founderMinInfo {
+  overflow: hidden;
+}
+
+.founderAvatar img {
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50%;
+}
+
+.founderBlock {
+  margin-bottom: 1.5em;
+}
+
+.founderTitle {
+  font-size: 2em;
+  color: #444444;
+  margin-bottom: 1em;
+}
+
+.founderInfoItem,
+.founderWorkItem,
+.founderEducationItem {
+  margin-bottom: .75em;
+}
+
+.founderInfoItemSkill {
+  background: #ffd8b3;
+  padding: 0.25em;
+  margin-bottom: 0.25em;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .founderTitle {
+    font-size: 1.563em;
+  }
+}
 /* ---Portfolio Item (Portfolio page)--- */
 .portfolioItem {
   background: #fff;
@@ -5589,6 +5645,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .textTitle {
   color: #444444;
   font-size: 2.188em;
+  line-height: 1.2em;
   font-weight: 400;
   margin-bottom: .25em;
 }
@@ -5899,6 +5956,10 @@ a {
 }
 a:hover, a:focus {
   color: #ff7e00;
+}
+
+b {
+  font-weight: 700;
 }
 
 .pageTitle {
