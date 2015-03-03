@@ -56,7 +56,7 @@
   font-weight: 400;
   color: $colorFont_2;
   padding-top: 0.625em;
-  border-top: 1px solid $borderColor;
+  border-top: 1px dotted darken($borderColor, 10%);
 }
 
 

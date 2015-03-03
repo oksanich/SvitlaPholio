@@ -5487,7 +5487,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: 400;
   color: #9d9b9b;
   padding-top: 0.625em;
-  border-top: 1px solid #d5d5d5;
+  border-top: 1px dotted #bcbcbc;
 }
 
 @media (min-width: 768px) {
